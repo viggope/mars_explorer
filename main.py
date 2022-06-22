@@ -38,8 +38,15 @@ def main():
         if state == 0:
             state = main_menu()
         elif state == 1:
+            # create game
             pass
         elif state == 2:
+            # load game
             pass
-
+        elif state == 3:
+            # save game
+            pass
+        elif state == 4:
+            # base
+            pass
 main()
