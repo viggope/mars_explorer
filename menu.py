@@ -1,4 +1,6 @@
-import time, keyboard, os
+import time, keyboard, os, colorama
+
+colorama.init()
 
 def slow_print(string):
     for char in string:
@@ -11,28 +13,28 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 title = r"""
-                           ___
-    |\    /|    /\    |\  |
-    | \  / |   /  \   |/  |___
-    |  \/  |  /----\  |\      |
-    |      | /      \ | \  ___|
-
-    """
+                           ___     
+    |\    /|    /\    |\  |        
+    | \  / |   /  \   |/  |___     
+    |  \/  |  /----\  |\      |    
+    |      | /      \ | \  ___|    
+                                   """
 
 class ChoiceMenu:
-    def __init__(self, items, title = "") -> None:
+    def __init__(self, items, title = "", title_color = None) -> None:
         self.items = items
         self.title = title
         self.cursor = 0
         self.times_shown = 0
         self.item_time = time.time()
+        self.title_color = title_color if title_color else ""
     
     def reset(self):
         self.cursor = 0
         self.times_shown = 0
 
     def __repr__(self) -> str:
-        string = "" if self.title == "" else self.title + "\n"
+        string = "" if self.title == "" else self.title_color + self.title + colorama.Style.RESET_ALL + "\n"
         for n, item in enumerate(self.items):
             if n == self.cursor:
                 string += "> "+item
