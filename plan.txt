@@ -1,0 +1,114 @@
+____ MARS ____
+
+* På svenska
+* Bas
+* Man är en robot
+* Olika generationer
+* Man kan namnge sina egna
+* Man nåste ladda sig själv under dagen för att inte dö
+* Varje generation har ett eget mål
+
+
+Material
+
+Stenium:
+Klassiskt material som man hittar oftast.
+Vanlighet: Vanligt (Spelets vanligaste)
+
+Axyt:
+Spelets hårdaste material, sällsynt
+Vanlighet: Sällsynt
+
+Elektronium:
+Detta material innehåller elektronik. Används för att bygga elektriska saker.
+Vanlighet: Vanligt
+
+Platrium:
+Används för att bygga stående saker så som väggar och maskiner.
+Vanlighet: Vanligt
+
+
+
+
+
+
+
+Stående verktyg
+
+Vertexator:
+Skannar material för att se vad man kan bygga med det
+
+
+
+Ugn:
+Smälter material till en lättare att crafta med
+
+
+
+
+Medtagbara verktyg
+
+Lumminator:
+Typ som en ficklampa, - visar hemligheter
+1x luminatus + 1x stenium
+
+Tanator:
+Används för att kunna plocka saker från marken
+2x stenium
+
+Medtagbara saker
+
+Batteri:
+Kan användas i nöd då man har lite energi och man är långt från
+ basen/närmaste laddstation eller att det är natt
+1x elektronium
+
+
+
+
+Generationer
+
+0: Story
+
+1: Du är den första roboten på planeten! Utforska och upptäck de vanligaste materialerna och undersök landskapet på planeten.
+Mål: Upptäck de fem första materialen
+Robotar: 0
+SkeppsModell: X8937abPI
+Robotmodell: GRETA-N8
+
+
+2: Fortsätt utforska då ett antal material har hittats, spelet blir mer komplext och fler saker kommer att inträffa...
+Mål: Leta upp Axyt
+Robotar: 1
+SkeppsModell: Q3724zcALFA
+Robotmodell: ALFRED-F2
+
+3: Du har uppnått tiden du känner till en stor del material, men det finns mer att se.
+Mål: Hitta
+Robotar: 5
+SkeppsModell: Z1345ghZETA
+Robotmodell: BOB-L7
+
+4: Nästan allt material är upptäckt och det finns inte mycket kvar.
+Mål: ?
+Robotar: 12
+SkeppsModell: A9101ssBETA
+Robotmodell: MARGARETA-J5
+
+5: Planeten är inte överraskande längre. Nu behöver vi tecken på liv för att människor ska kunna flytta hit.
+Mål: is
+SkeppsModell: P0415roOMEGA
+Robotmodell: ERIK-V3
+
+X: Denna planet är helt ny! Upptäck dessa nyheter genast
+Mål: ?
+SkeppsModell: O2473awPSI
+Robotmodell: MAGNUS-J2
+Efter
+
+Y: En resa till Mars ska förberedas, du är ansvarig så att alla inställningar är rätt.
+Mål: Kalkylera antalet resurser som krävs för resan, även avståndet mm.
+Innan
+
+Z: Sista uppdraget innan människorna kan ankomma mars, bygg baser och hus åt människorna.
+Mål: Rusta upp en civilisation för människorna innan de lämnar jorden.
