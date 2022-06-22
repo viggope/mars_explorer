@@ -81,12 +81,4 @@ class Menu:
         keyboard.unhook_all()
         return self.cursor
 
-# def menu(items):
-#     cursor = 0
-#     for n, item in enumerate(items):
-#         if n == cursor:
-#             slow_print("> "+item)
-#         else:
-#             slow_print("  "+item)
-
 print(Menu(["Mygga", "Leg", "Bob"], title).run())
