@@ -1,26 +1,43 @@
 import menu, save
 
-def about():
-    pass
+def credits():
+    menu_ = menu.InfoMenu("""
+    This game was made by:
+    RasmusTufvesson
+    """)
 
 def main_menu():
     n = None
     while n != None or n == 1:
         if not save.save_exists():
-            menu_ = menu.ChoiceMenu(["Start new game", "About", "Exit"])
+            menu_ = menu.ChoiceMenu(["Start new game", "Credits", "Exit"])
+            _, n = menu_.run()
+            if n == 0:
+                return 1
+            elif n == 1:
+                credits()
+            else:
+                quit()
         else:
-            menu_ = menu.ChoiceMenu(["Start new game", "About", "Exit"])
-        name, n = menu_.run()
-        if n == 0:
-            return 1
-        elif n == 1:
-            about()
-        else:
-            quit()
+            menu_ = menu.ChoiceMenu(["Continue game", "Start new game", "Credits", "Exit"])
+            _, n = menu_.run()
+            if n == 0:
+                return 2
+            elif n == 1:
+                return 1
+            elif n == 2:
+                credits()
+            else:
+                quit()
 
 def main():
-    state = 0
-    if state == 0:
-        main_menu()
+    while True:
+        state = 0
+        if state == 0:
+            state = main_menu()
+        elif state == 1:
+            pass
+        elif state == 2:
+            pass
 
 main()

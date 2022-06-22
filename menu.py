@@ -17,7 +17,6 @@ title = r"""
     |  \/  |  /----\  |\      |
     |      | /      \ | \  ___|
 
-    -- Play now! --
     """
 
 class ChoiceMenu:
@@ -82,7 +81,22 @@ class ChoiceMenu:
         keyboard.send("ctrl+a, delete")
         return self.items[self.cursor], self.cursor
 
+class InfoMenu:
+    def __init__(self, text) -> None:
+        self.text = text
+    
+    def __repr__(self) -> str:
+        return self.text + "\nPress enter to continue"
+    
+    def print(self):
+        clear()
+        print (self)
+
+    def run(self):
+        self.print()
+        keyboard.wait("enter")
+
 if __name__ == "__main__":
-    menu = Menu(["Mygga", "Leg", "Bob"], title)
+    menu = ChoiceMenu(["Mygga", "Leg", "Bob"], title)
 
     print(menu.run())
