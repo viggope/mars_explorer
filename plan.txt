@@ -1,0 +1,38 @@
+____ MARS ____
+
+* På svenska
+* Bas
+* Man är en robot
+* Olika generationer
+* Man kan namnge sina egna
+
+
+
+Material
+
+
+
+
+Stående verktyg
+
+Vertexator:
+Skannar material för att se vad man kan bygga med det
+
+
+
+Ugn:
+Smälter material till en lättare att crafta med
+
+
+
+
+Medtagbara verktyg
+
+Lumminator:
+Typ som en ficklampa, - visar hemligheter
+1x luminatus + 1x stenium
+
+Tanator:
+Används för att kunna plocka saker från marken
+2x stenium
+
