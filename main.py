@@ -81,6 +81,6 @@ class Menu:
         keyboard.unhook_all()
         keyboard.send("ctrl+a")
         keyboard.send("delete")
-        return self.cursor
+        return self.items[self.cursor], self.cursor
 
 print(Menu(["Mygga", "Leg", "Bob"], title).run())
