@@ -79,8 +79,9 @@ class Menu:
         keyboard.hook_key("down", self.down)
         keyboard.wait("enter")
         keyboard.unhook_all()
-        keyboard.send("ctrl+a")
-        keyboard.send("delete")
+        keyboard.send("ctrl+a, delete")
         return self.items[self.cursor], self.cursor
 
-print(Menu(["Mygga", "Leg", "Bob"], title).run())
+menu = Menu(["Mygga", "Leg", "Bob"], title)
+
+print(menu.run())
