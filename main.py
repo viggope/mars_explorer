@@ -1,87 +1,26 @@
-import time, keyboard, os
+import menu, save
 
-def slow_print(string):
-    for char in string:
-        print (char, end = "", flush=True)
-        if char != " ":
-            time.sleep(.01)
-    print ("")
+def about():
+    pass
 
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-title = r"""
-                           ___
-    |\    /|    /\    |\  |
-    | \  / |   /  \   |/  |___
-    |  \/  |  /----\  |\      |
-    |      | /      \ | \  ___|
-
-    -- Play now! --
-    """
-
-class Menu:
-    def __init__(self, items, title = "") -> None:
-        self.items = items
-        self.title = title
-        self.cursor = 0
-        self.times_shown = 0
-        self.item_time = time.time()
-    
-    def reset(self):
-        self.cursor = 0
-        self.times_shown = 0
-
-    def __repr__(self) -> str:
-        string = "" if self.title == "" else self.title + "\n"
-        for n, item in enumerate(self.items):
-            if n == self.cursor:
-                string += "> "+item
-            else:
-                string += "  "+item
-            if n != len(self.items)-1:
-                string += "\n"
-        return string
-
-    def print(self):
-        clear()
-        if self.times_shown == 0:
-            slow_print(str(self))
+def main_menu():
+    n = None
+    while n != None or n == 1:
+        if not save.save_exists():
+            menu_ = menu.ChoiceMenu(["Start new game", "About", "Exit"])
         else:
-            print (self)
-
-    def down(self, _):
-        if time.time() - self.item_time < .5:
-            return
-        self.item_time = time.time()
-        self.cursor += 1
-        if self.cursor == len(self.items):
-            self.cursor -= 1
+            menu_ = menu.ChoiceMenu(["Start new game", "About", "Exit"])
+        name, n = menu_.run()
+        if n == 0:
+            return 1
+        elif n == 1:
+            about()
         else:
-            self.print()
-        self.times_shown += 1
-    
-    def up(self, _):
-        if time.time() - self.item_time < .5:
-            return
-        self.item_time = time.time()
-        self.cursor -= 1
-        if self.cursor == -1:
-            self.cursor += 1
-        else:
-            self.print()
-        self.times_shown += 1
+            quit()
 
-    def run(self):
-        self.print()
-        self.times_shown += 1
-        keyboard.hook_key("up", self.up)
-        keyboard.hook_key("down", self.down)
-        keyboard.wait("enter")
-        keyboard.unhook_all()
-        keyboard.send("ctrl+a, delete")
-        return self.items[self.cursor], self.cursor
+def main():
+    state = 0
+    if state == 0:
+        main_menu()
 
-menu = Menu(["Mygga", "Leg", "Bob"], title)
-
-print(menu.run())
+main()
